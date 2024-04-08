@@ -23,6 +23,13 @@ export class AppComponent {
     console.log(event.target);
   }
 
+  doFocus(event, e) {
+    var myData = (event.clipboardData || window['clipboardData']).getData('text'); ;
+    alert('input change '+myData);
+    console.log(event.target);
+    console.log(e);
+  }
+
   doInput(event, e) {
     var myData = (event.clipboardData || window['clipboardData']).getData('text'); ;
     alert('input change '+myData);
