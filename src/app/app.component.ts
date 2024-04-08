@@ -24,7 +24,8 @@ export class AppComponent {
   }
 
   doInput(event) {
-    alert('input change');
+    var myData = (event.clipboardData || window['clipboardData']).getData('text'); ;
+    alert('input change '+myData);
     console.log(event.target);
   }
 }
