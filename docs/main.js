@@ -60,8 +60,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(window) {
+        this.window = window;
         this.title = 'sample';
+        this.windowAll = window;
     }
     AppComponent.prototype.doChange = function (event) {
         alert('change');
@@ -76,7 +78,7 @@ var AppComponent = /** @class */ (function () {
         console.log(event.target);
     };
     AppComponent.prototype.doInput = function (event) {
-        var myData = (event.clipboardData || window['clipboardData']).getData('text');
+        var myData = (event.clipboardData || this.windowAll['clipboardData']).getData('text');
         ;
         alert('input change ' + myData);
         console.log(event.target);
@@ -86,7 +88,8 @@ var AppComponent = /** @class */ (function () {
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Window])
     ], AppComponent);
     return AppComponent;
 }());
@@ -124,7 +127,7 @@ var AppModule = /** @class */ (function () {
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]
             ],
-            providers: [],
+            providers: [{ provide: Window, useValue: window }],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
