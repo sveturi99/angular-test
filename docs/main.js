@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <input type=\"text\" (change)=\"doChange($event)\" (input)=\"doInput($event)\" (focus)=\"focus($event)\" (paste)=\"doPaste($event)\"\n    (ngModelChange)=\"doModelChange($event)\" maxlength=\"1\" id=\"1\">\n  <input type=\"text\" maxlength=\"1\" id=\"2\">\n  <input type=\"text\" maxlength=\"1\" id=\"3\">\n  <input type=\"text\" maxlength=\"1\" id=\"4\">\n  <input type=\"text\" maxlength=\"1\" id=\"5\">\n  <input type=\"text\" maxlength=\"1\" id=\"6\">\n</div>"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <input type=\"text\" (change)=\"doChange($event)\" (input)=\"doInput($event)\" (focus)=\"doFocus($event)\" (paste)=\"doPaste($event)\"\n    (ngModelChange)=\"doModelChange($event)\" maxlength=\"1\" id=\"1\">\n  <input type=\"text\" maxlength=\"1\" id=\"2\">\n  <input type=\"text\" maxlength=\"1\" id=\"3\">\n  <input type=\"text\" maxlength=\"1\" id=\"4\">\n  <input type=\"text\" maxlength=\"1\" id=\"5\">\n  <input type=\"text\" maxlength=\"1\" id=\"6\">\n</div>"
 
 /***/ }),
 
