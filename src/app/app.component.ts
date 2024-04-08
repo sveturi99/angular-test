@@ -7,11 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sample';
-  windowAll;
-
-  constructor(private window: Window) {
-    this.windowAll =window;
-  }
 
   doChange(event) {
     alert('change');
@@ -29,7 +24,7 @@ export class AppComponent {
   }
 
   doInput(event) {
-    var myData = (event.clipboardData || this.windowAll['clipboardData']).getData('text'); ;
+    var myData = (event.clipboardData || window['clipboardData']).getData('text'); ;
     alert('input change '+myData);
     console.log(event.target);
   }
