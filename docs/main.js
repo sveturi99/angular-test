@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <input type=\"text\" maxlength=\"1\" id=\"1\">\n  <input type=\"text\" maxlength=\"1\" id=\"2\">\n  <input type=\"text\" maxlength=\"1\" id=\"3\">\n  <input type=\"text\" maxlength=\"1\" id=\"4\">\n  <input type=\"text\" maxlength=\"1\" id=\"5\">\n  <input type=\"text\" maxlength=\"1\" id=\"6\">\n</div>\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <input type=\"text\" (change)=\"doChange($event)\" (paste)=\"doPaste($event)\" (input)=\"doInput($event)\"\n    (ngModelChange)=\"doModelChange($event)\" maxlength=\"1\" id=\"1\">\n  <input type=\"text\" maxlength=\"1\" id=\"2\">\n  <input type=\"text\" maxlength=\"1\" id=\"3\">\n  <input type=\"text\" maxlength=\"1\" id=\"4\">\n  <input type=\"text\" maxlength=\"1\" id=\"5\">\n  <input type=\"text\" maxlength=\"1\" id=\"6\">\n</div>"
 
 /***/ }),
 
@@ -63,6 +63,22 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'sample';
     }
+    AppComponent.prototype.doChange = function (event) {
+        alert('change');
+        console.log(event.target);
+    };
+    AppComponent.prototype.doModelChange = function (event) {
+        alert('model change');
+        console.log(event.target);
+    };
+    AppComponent.prototype.doPaste = function (event) {
+        alert('event change');
+        console.log(event.target);
+    };
+    AppComponent.prototype.doInput = function (event) {
+        alert('input change');
+        console.log(event.target);
+    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
