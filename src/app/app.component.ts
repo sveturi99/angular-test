@@ -1,21 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'sample';
+  test: boolean;
+  maxlength: number;
 
+  ngOnInit(): void {
+    this.test = true;
+    this.maxlength = 6;
+  }
+  
   doChange(event) {
     alert('change');
     console.log(event.target);
+    this.maxlength = 1;
   }
 
   doModelChange(event) {
     alert('model change');
     console.log(event.target);
+    this.maxlength = 1;
   }
 
   doPaste(event) {
@@ -28,6 +37,7 @@ export class AppComponent {
     alert('input change '+myData);
     console.log(event.target);
     console.log(e);
+    this.maxlength = 1;
   }
 
   doInput(event, e) {
@@ -35,5 +45,6 @@ export class AppComponent {
     alert('input change '+myData);
     console.log(event.target);
     console.log(e);
+    this.maxlength = 1;
   }
 }

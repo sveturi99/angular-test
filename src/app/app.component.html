@@ -1,7 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <input type="text" (change)="doChange($event)" (input)="doInput($event)" (focus)="doFocus($event)" (paste)="doPaste($event)"
-    (ngModelChange)="doModelChange($event)" maxlength="1" id="1">
+  <input type="text" (change)="doChange($event)" (input)="doInput($event)" (focus)="doFocus($event)"
+    (paste)="doPaste($event)" (ngModelChange)="doModelChange($event)" [(ngModel)]="test"
+    (ngModelChange)="doModelChange($event)" [maxlength]="maxlength" id="1">
   <input type="text" maxlength="1" id="2">
   <input type="text" maxlength="1" id="3">
   <input type="text" maxlength="1" id="4">
